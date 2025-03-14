@@ -29,9 +29,7 @@ body {
 }
 
 .header.scrolled {
-    background-color: rgba(0, 0, 0, 0.5); /* Dark, semi-transparent when scrolled */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
+    backdrop-filter: blur(7px); /* Add a blured background */}
 
 .logo {
     display: flex;
