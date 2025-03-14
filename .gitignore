@@ -1,0 +1,34 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node modules (if you add any in the future)
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Build directory
+dist/
+build/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: Ignore image files (uncomment if you don't want to track images in git)
+# images/**/*.jpg
+# images/**/*.png
+# images/**/*.gif
+
+# Temporary files
+*.tmp
+*.temp
