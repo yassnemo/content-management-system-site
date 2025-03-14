@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Yassine Erradouani</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Blog Logo">
+        </div>
+        <div class="contact">
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ARTICLES</h1>
+        </div>
+    </section>
+
+    <!-- Main Content - Homepage -->
+    <main class="main" id="homePage">
+        <div class="blog-list">
+            <!-- Blog Post 1 -->
+            <div class="blog-item">
+ 
+                <a href="javascript:showPost('post1')" class="blog-image">
+                    <img src="/images/posts/post1.jpg" alt="Blog Post 1">
+                </a>
+                <h2 class="blog-title">Problems, Smarts & The Way It Goes</h2>
+                <div class="blog-content">
+                    <div class="blog-date">March 14, 2025</div>
+                    <a href="javascript:showPost('post1')" class="read-more">Read More »</a>
+                </div>
+            </div>
+            
+            <!-- Blog Post 2 -->
+
+        </div>
+    </main>
+    
+    <!-- Post Page Template - Hidden by default -->
+    <div id="post1" class="post-page" style="display: none;">
+        <div class="post-header">
+            <img src="/images/posts/post1.jpg" alt="Post 1 Header Image">
+            <div class="post-title-overlay">
+                <h3 class="post-title">Problems, Smarts & The Way It Goes</h3>
+                <div class="post-meta">
+                    <span class="post-date">March 14, 2025</span>
+                </div>
+            </div>
+        </div>
+        <div class="post-content">
+            
+            <h2>1. How to Take Criticism</h2>
+            <p>The ability to receive criticism well is perhaps one of the most underrated skills in personal development. When someone offers you criticism, try this approach:</p>
+            <p>First, take a deep breath. Your initial reaction might be defense, but pause before responding. Then, consider: "What percentage of this feedback might be true?" Even if it's just 10%, that's valuable information you can use to improve.</p>
+            <p>Remember that criticism often says as much about the giver as it does about you. The most valuable criticism comes from those who want you to succeed, not those who simply want to tear you down.</p>
+            
+            <blockquote>"The trouble with most of us is that we would rather be ruined by praise than saved by criticism." — Norman Vincent Peale</blockquote>
+            
+            <h2>2. Determining What's Actually True</h2>
+            <p>In an age of information overload, determining what's factual has become increasingly difficult. Here's a simple framework:</p>
+            <p>Ask yourself: "What evidence would change my mind about this?" If you can't think of anything, you're likely dealing with a belief rather than a fact. Facts should be malleable in the face of compelling evidence.</p>
+            <p>Look for sources that have incentives aligned with accuracy rather than engagement. And most importantly, be willing to update your views when new information emerges.</p>
+            
+            <h2>3. Building a Strong Marriage</h2>
+            <p>After studying thousands of couples, researchers found that the strongest marriages aren't those without conflict – they're the ones where partners turn toward each other's "bids" for connection.</p>
+            <p>A "bid" is any attempt to connect, whether it's a comment, question, or gesture. Simply acknowledging these small moments builds relationship equity that helps weather the inevitable storms.</p>
+            <p>The magic ratio? Five positive interactions for every negative one. This doesn't mean avoiding difficult conversations, but rather ensuring your relationship has enough positive moments to balance the challenging ones.</p>
+            
+            <p>Remember, small insights consistently applied can lead to remarkable changes over time.</p>
+        </div>
+    </div>
+    
+
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>I ramble about life’s absurdities and pretend I’ve got it figured out.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>Copyright 2025 © Yassine Erradouani</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
