@@ -54,3 +54,51 @@ document.addEventListener('DOMContentLoaded', function() {
         showPost(postId);
     }
 });
+
+// Enhanced mobile dropdown menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        
+        // Add ripple effect when clicked
+        let ripple = document.createElement('span');
+        ripple.classList.add('ripple-effect');
+        
+        const size = Math.max(this.offsetWidth, this.offsetHeight);
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left - size/2;
+        const y = e.clientY - rect.top - size/2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+    
+    // Close the menu when clicking outside
+    document.addEventListener('click', function() {
+        dropdownMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    });
+    
+    // Prevent menu closing when clicking inside the dropdown
+    dropdownMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    
+    // Add staggered animation for menu items
+    const menuItems = dropdownMenu.querySelectorAll('a');
+    menuItems.forEach((item, index) => {
+        item.style.transitionDelay = (index * 0.05) + 's';
+    });
+});

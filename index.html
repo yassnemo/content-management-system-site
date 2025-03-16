@@ -9,14 +9,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <body>
     <!-- Header -->
+    <!-- Header with Enhanced Mobile Menu -->
     <header class="header" id="header">
         <div class="logo">
             <img src="/images/logo.png" alt="Blog Logo">
         </div>
-        <div class="contact">
+        <div class="mobile-menu">
+            <button id="menuToggle" class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="dropdownMenu" class="dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="contact desktop-only">
             <a href="contact.html">Contact</a>
         </div>
     </header>
+
+    <style>
+    .ripple-effect {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        pointer-events: none;
+    }
+
+    @keyframes ripple {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+    </style>
 
     <!-- Hero Section -->
     <section class="hero">
