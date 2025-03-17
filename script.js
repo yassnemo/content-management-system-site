@@ -11,11 +11,13 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled');
     }
 });
-
 // Function to toggle between home and post pages
 function showPost(postId) {
     // Hide home page
     document.getElementById('homePage').style.display = 'none';
+    
+    // Hide the hero section when showing a post
+    document.querySelector('.hero').style.display = 'none';
     
     // Hide all post pages
     const postPages = document.querySelectorAll('.post-page');
@@ -35,15 +37,17 @@ function showPost(postId) {
 
 // Handle back button
 window.addEventListener('popstate', function() {
-    // Simple implementation - just show home page on back button
+    // Show home page on back button
     document.getElementById('homePage').style.display = 'block';
+    
+    // Show the hero section again
+    document.querySelector('.hero').style.display = 'flex';
     
     const postPages = document.querySelectorAll('.post-page');
     postPages.forEach(page => {
         page.style.display = 'none';
     });
 });
-
 
 // Check if we need to show a specific post on page load (for direct links)
 document.addEventListener('DOMContentLoaded', function() {

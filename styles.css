@@ -29,7 +29,9 @@ body {
 }
 
 .header.scrolled {
-    backdrop-filter: blur(7px); /* Add a blured background */}
+    backdrop-filter: blur(7px);
+    background-color: rgba(18, 45, 66, 0.50); /* #122D42 with transparency */
+}
 
 .logo {
     display: flex;
@@ -173,10 +175,6 @@ body {
         display: none;
     }
     
-    .logo {
-        margin-right: 0;
-    }
-    
     .header {
         padding: 15px 20px;
         justify-content: space-between;
@@ -186,6 +184,40 @@ body {
     .header.scrolled .dropdown-menu {
         background-color: rgba(24, 49, 71, 0.75);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Desktop navigation links */
+.desktop-links {
+    display: flex;
+    gap: 30px;
+    margin-left: 400px; /* Add spacing just like the original */
+
+}
+
+.desktop-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.desktop-links a:hover {
+    color: #2AC5C5;
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Hide desktop links on mobile */
+@media (max-width: 768px) {
+    .desktop-links {
+        display: none;
     }
 }
 
