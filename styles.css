@@ -297,44 +297,76 @@ body {
 .post-page {
     margin-top: 0;
 }
-
+/* Updated Post Header Styles to match Hero section */
 .post-header {
     position: relative;
-    height: 400px;
+    height: 50vh; /* Same height as hero section */
     overflow: hidden;
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .post-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.post-title-overlay {
+/* Enhanced overlay with stronger tint */
+.post-header::before {
+    content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 40px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    height: 100%;
+    background-color: rgba(18, 45, 66, 0.65); /* Darker blue tint with increased opacity */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(18, 45, 66, 0.55)); /* Gradient overlay */
+    z-index: 1;
+}
+
+.post-title-overlay {
+    position: relative;
+    z-index: 2; /* Ensure text is above the tint */
+    text-align: center;
+    padding: 0 40px;
     color: #fff;
+    width: 100%;
 }
 
 .post-title {
-    font-size: 36px;
+    font-size: 50px; /* Same size as hero h1 */
     font-weight: 700;
+    letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
 .post-meta {
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 14px;
 }
 
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 36px; /* Match hero responsive size */
+    }
+    
+    .post-header {
+        height: 300px;
+    }
+}
+
 .post-date {
     margin-right: 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow for date */
+
 }
 
 .post-content {
